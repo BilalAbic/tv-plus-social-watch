@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV+ Sosyal İzleme</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>TV+ Sosyal İzleme</h1>
+            <div class="room-info">
+                <span id="selected-content">İçerik seçilmedi</span>
+                <span id="countdown">--:--:--</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Left Side - Video Player -->
+        <div class="video-section">
+            <div class="video-player">
+                <div class="video-placeholder">
+                    <div class="play-icon" id="play-btn">▶</div>
+                    <div class="video-title" id="video-title">Mock Video Player</div>
+                </div>
+                <div class="video-controls">
+                    <button id="play-pause-btn">▶ Play</button>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <span id="time-display">00:00 / 00:00</span>
+                    <button id="sync-btn" class="sync-btn">🔄 Senkronize Et</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Tabs -->
+        <div class="sidebar">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="voting">Oylama</button>
+                <button class="tab-btn" data-tab="chat">Sohbet</button>
+                <button class="tab-btn" data-tab="split">Masraf</button>
+            </div>
+
+            <!-- Voting Tab -->
+            <div class="tab-content active" id="voting-tab">
+                <h3>İçerik Oylaması</h3>
+                <div class="candidates-list" id="candidates-list">
+                    <div class="candidate-item">
+                        <span>Film 1</span>
+                        <button class="vote-btn" data-content="film1">Oy Ver</button>
+                        <span class="vote-count">0 oy</span>
+                    </div>
+                    <div class="candidate-item">
+                        <span>Film 2</span>
+                        <button class="vote-btn" data-content="film2">Oy Ver</button>
+                        <span class="vote-count">0 oy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Tab -->
+            <div class="tab-content" id="chat-tab">
+                <h3>Sohbet</h3>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message">
+                        <span class="username">Sistem:</span>
+                        <span class="text">Odaya hoş geldiniz!</span>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="message-input" placeholder="Mesajınızı yazın...">
+                    <button id="send-btn">Gönder</button>
+                </div>
+                <div class="emoji-bar">
+                    <button class="emoji-btn" data-emoji="👏">👏</button>
+                    <button class="emoji-btn" data-emoji="😂">😂</button>
+                    <button class="emoji-btn" data-emoji="❤️">❤️</button>
+                    <button class="emoji-btn" data-emoji="👍">👍</button>
+                    <button class="emoji-btn" data-emoji="😮">😮</button>
+                </div>
+            </div>
+
+            <!-- Split Tab -->
+            <div class="tab-content" id="split-tab">
+                <h3>Masraf Paylaşımı</h3>
+                <div class="expense-form">
+                    <input type="text" id="expense-desc" placeholder="Açıklama">
+                    <input type="number" id="expense-amount" placeholder="Tutar" step="0.01">
+                    <button id="add-expense-btn">Masraf Ekle</button>
+                </div>
+                <div class="expenses-list" id="expenses-list">
+                    <!-- Masraflar buraya gelecek -->
+                </div>
+                <div class="balances" id="balances">
+                    <!-- Bakiyeler buraya gelecek -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
